@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: black;
+  min-height: 100vh;
+}
+
+/* 導覽列 */
+.top-bar {
+  background-color: #003366;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.top-bar a:hover {
+  text-decoration: underline;
+  color: #ffdd66;
+}
+.theme-toggle {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.theme-toggle:hover {
+  color: #ffdd66;
+  text-decoration: underline;
+}
+
+/* 商品分類列 */
+.category-bar {
+  background-color: #007acc;
+  padding: 10px;
+  text-align: center;
+}
+.category-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+.category-bar a:hover {
+  background-color: #005999;
+  border-radius: 6px;
+}
+
+/* 主區塊 */
+.main-content {
+  padding: 30px 0;
+  background-color: transparent;
+  min-height: calc(100vh - 100px);
+}
+
+/* 方框樣式 */
+.box-panel {
+  margin: 20px auto;
+  width: 40%;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 主題切換：深色樣式 */
+body.dark-theme {
+  background-color: #181818;
+  color: #f0f0f0;
+}
+
+body.dark-theme .box-panel {
+  background-color: rgba(45, 44, 44, 0.95);
+  color: #f0f0f0;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="password"] {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-theme input[type="submit"] {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark-theme input[type="submit"]:hover {
+  background-color: #666;
+}
+body.dark-theme textarea,
+body.dark-theme select {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: #222 !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #555 !important;
+}
+body.dark-theme input[type="number"] {
+  background-color: #222 !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #555 !important;
+}
+/* 保持右上角帳號連結字體為白色，hover 不變色 */
+.account-link {
+  color: white !important;
+}
+.account-link:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 38px;
+  will-change: transform;
+} 
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+/* 會員商品上傳頁面樣式 */
+.user-products-table {
+  width: 95%;
+  margin: 30px auto 0 auto;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #bbb;
+}
+.user-products-table th, .user-products-table td {
+  border: 1px solid #ddd;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 16px;
+}
+.user-products-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+.user-products-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px #ccc;
+}
+.cart-area {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.cart-link {
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  margin-left: 8px;
+  text-decoration: none;
+}
+.cart-badge {
+  display: inline-block;
+  background: #fff;
+  color: #e60012;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.add-cart-btn {
+  background: #e60012;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.2s;
+}
+.add-cart-btn:hover {
+  background: #b8000d;
+}
+
