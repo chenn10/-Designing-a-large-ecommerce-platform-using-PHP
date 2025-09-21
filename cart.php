@@ -145,7 +145,10 @@ foreach ($cartItems as $item) {
               echo " <span class='cart-badge'>{$cartCount}</span>";
           }
           echo "</a> &nbsp;&nbsp| ";
-          if ($username !== "admin") {
+          if ($username === "admin") {
+              echo "<a href='admin_database.php' style='color: #ff6b6b; font-weight: bold;'>🔧 資料庫管理</a> &nbsp;&nbsp| ";
+              echo "<a href='upitem.php'>上傳商品</a> &nbsp;&nbsp| ";
+          } else {
               echo "<a href='upitem.php'>上傳商品</a> &nbsp;&nbsp| ";
           }
           echo "<a href='home1-8.php'>登出</a>";
